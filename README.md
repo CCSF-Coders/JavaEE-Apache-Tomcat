@@ -10,3 +10,12 @@ We downloaded and installed [Apache Tomcat](https://tomcat.apache.org). A couple
   * Running tomcat means executing the bin/startup.bat or bin/startup.sh. If running on a linux/mac system, be sure that all the .sh files are executable. Use `(chmod +x *.sh)` from bin for that.
   * Once it's running then use a browser to open http://localhost:8080. If everythings is running properly you will see the Tomcat start page. Looking at the examples is instructive.
   * Look into configuring tomcat in Eclipse or your IDE. This is the best option for running and debugging the Java we will be writing in this project.  
+
+### Week2 - Development Environment and Two Simple Servlets
+  * We ran tomcat under the IDE. This is important because the IDE runs tomcat in a development mode. This allows you to debug apps running under tomcat and also to run different servers and configurations.
+  * Created a "Dynamic Web Project" in Eclipse. Set the tomcat server as the runtime environment. This is important so that Eclipse knows to bring the Tomcat jars into the project. The most important jar at this time is the servlet jar that has the HttpServlet code for writing servlets.  
+  * Created an HttpServlet by hand. The we deleted that and had Eclipse create one for us. Eclipse automatically added an annotation for the URL endpoint.
+  * Run the project and open `http://localhost:8080/Java-EE-Struts2/Hello` 
+  * Simplified the HelloWorldServlet and added some additional HTML code to the output.
+  * Created a GoodBye servlet, basically the same as the HelloServlet, and create links on the HTML output to link back and forth to each servlet. 
+  * Changed to WEB-INF/web.xml based configuration just to cover the topic of configuration in greater detail.
