@@ -19,3 +19,11 @@ We downloaded and installed [Apache Tomcat](https://tomcat.apache.org). A couple
   * Simplified the HelloWorldServlet and added some additional HTML code to the output.
   * Created a GoodBye servlet, basically the same as the HelloServlet, and create links on the HTML output to link back and forth to each servlet. 
   * Changed to WEB-INF/web.xml based configuration just to cover the topic of configuration in greater detail.
+  
+### Week3 - Add JSP pages
+  * Created a Hello.jsp and a GoodBye.jsp. 
+  * Removed the simple html code from the servlets and put it into the JSP pages.
+  * Added redirects in the servlets to point to the to the jsp pages.
+  * Fixed up the HTML in the JSP pages to look a little like menus.
+      
+  
