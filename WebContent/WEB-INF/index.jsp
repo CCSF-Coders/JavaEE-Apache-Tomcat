@@ -7,7 +7,8 @@
 <title>Insert title here</title>
 </head>
 <body>
-<p><a href='Hello' >HELLO</a>&nbsp;|&nbsp;<a href='GoodBye' >GOODBYE</a></p> 
+<p><a href='' >HELLO</a>&nbsp;|&nbsp;<a href='goodbye' >GOODBYE</a></p> 
 Something in it. <%= request.getAttribute("name") %>.
-</body>
+
+</body >
 </html>

@@ -7,7 +7,12 @@
 <title>Insert title here</title>
 </head>
 <body>
-<p><a href='Hello' >HELLO</a>&nbsp;|&nbsp;<a href='GoodBye' >GOODBYE</a></p> 
+<p><a href='' >HELLO</a>&nbsp;|&nbsp;<a href='goodbye' >GOODBYE</a></p> 
 GoodBye
+<form method="post" action="goodbye" >
+Name<input type="text" name="name" />
+<input type="submit"  title="Submit" />
+</form>
+
 </body>
 </html>
