@@ -26,4 +26,10 @@ We downloaded and installed [Apache Tomcat](https://tomcat.apache.org). A couple
   * Added redirects in the servlets to point to the to the jsp pages.
   * Fixed up the HTML in the JSP pages to look a little like menus.
       
+### Week 4 - Finish HTML portion
+  * Changed names to lower case. 
+  * Renamed hello jsp and java to index jsp and index 
+  * Updated web.xml to reflect changes. 
+  * Changed web.xml to use "" (context root) as URL for index. 
+  * Added a simple form to goodbye.jsp and doPost processing to Goodbye.java.
   
