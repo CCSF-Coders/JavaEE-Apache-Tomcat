@@ -3,14 +3,17 @@
 	xmlns="http://java.sun.com/xml/ns/javaee"
 	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
 	version="2.5">
+	<listener>
+		<listener-class>config.StartStopListener</listener-class>
+	</listener>
 	<servlet-mapping>
 		<servlet-name>index</servlet-name>
 		<url-pattern></url-pattern>
 	</servlet-mapping>
-        <servlet-mapping>
-                <servlet-name>goodbye</servlet-name>
-                <url-pattern>/goodbye</url-pattern>
-        </servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>goodbye</servlet-name>
+		<url-pattern>/goodbye</url-pattern>
+	</servlet-mapping>
 	<servlet>
 		<servlet-name>index</servlet-name>
 		<servlet-class>Index</servlet-class>
