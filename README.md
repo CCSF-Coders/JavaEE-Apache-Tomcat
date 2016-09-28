@@ -32,4 +32,12 @@ We downloaded and installed [Apache Tomcat](https://tomcat.apache.org). A couple
   * Updated web.xml to reflect changes. 
   * Changed web.xml to use "" (context root) as URL for index. 
   * Added a simple form to goodbye.jsp and doPost processing to Goodbye.java.
+
+### Week 5 - Add JDBC driver
+  * Added a StartStop Listener to the application to capture initialization and shutdown
+  * removed Index.java's init method because it was not used
+  * Downloaded HSQLDB pure Java database engine.
+  * Added hsqldb.jar to the WEB-INF/lib directory 
+  * Added code to open database connection, create a table, and add a row to the StartStopListener
+  * Added code to (re) open a database connection and retrieve rows to the Index.java servlet.
   
