@@ -11,6 +11,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import model.Registration;
+
 @SuppressWarnings("serial")
 public class Index extends HttpServlet {
 
@@ -24,7 +26,8 @@ public class Index extends HttpServlet {
 	
 			ResultSet results = stmt.executeQuery(sql);
 			results.next();
-			request.setAttribute("name", results.getString(2) + " " + results.getString(3));
+			Registration reg = new Registration(results.getInt(1), results.getString(2), results.getString(3), results.getInt(4) );
+			request.setAttribute("reg", reg);
 			conn.close();
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
