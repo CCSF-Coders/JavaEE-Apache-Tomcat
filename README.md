@@ -40,4 +40,8 @@ We downloaded and installed [Apache Tomcat](https://tomcat.apache.org). A couple
   * Added hsqldb.jar to the WEB-INF/lib directory 
   * Added code to open database connection, create a table, and add a row to the StartStopListener
   * Added code to (re) open a database connection and retrieve rows to the Index.java servlet.
-  
+
+### Week 6 - Add model.Registration class
+  * Added a model.Registration class to represent the database table.
+  * passed the model.Registration to a jsp page.
+  * displayed values from the passed Java Bean on the jsp page. 
