@@ -1,16 +1,37 @@
 package model;
 
-public class Registration {
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+import dao.DaoBase;
+
+public class Registration extends DaoBase<Registration> {
 	private Integer id;
-	private String first;
 	private String last;
+	private String first;
+	private String email;
+	private String phoneNumber;
 	private Integer age;
-	public Registration(Integer id, String first, String last, Integer age) {
-		super();
-		this.id = id;
-		this.first = first;
-		this.last = last;
-		this.age = age;
+	@Override
+	public void decodeResultSet(ResultSet rset) throws SQLException {
+		id = rset.getInt(1);
+		last = rset.getString(2);
+		first = rset.getString(3);
+		email = rset.getString(4);
+		phoneNumber = rset.getString(5);
+		age = rset.getInt(6);
+	}
+	@Override
+	public String getTable() {
+		return "Registration";
+	}
+	@Override
+	public String getPrimaryKey() {
+		return "id";
+	}
+	@Override
+	public Registration makeNewT() {
+		return new Registration();
 	}
 	public Integer getId() {
 		return id;
@@ -18,17 +39,29 @@ public class Registration {
 	public void setId(Integer id) {
 		this.id = id;
 	}
+	public String getLast() {
+		return last;
+	}
+	public void setLast(String last) {
+		this.last = last;
+	}
 	public String getFirst() {
 		return first;
 	}
 	public void setFirst(String first) {
 		this.first = first;
 	}
-	public String getLast() {
-		return last;
+	public String getEmail() {
+		return email;
 	}
-	public void setLast(String last) {
-		this.last = last;
+	public void setEmail(String email) {
+		this.email = email;
+	}
+	public String getPhoneNumber() {
+		return phoneNumber;
+	}
+	public void setPhoneNumber(String phoneNumber) {
+		this.phoneNumber = phoneNumber;
 	}
 	public Integer getAge() {
 		return age;

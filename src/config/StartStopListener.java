@@ -24,19 +24,38 @@ public class StartStopListener implements ServletContextListener {
 			Class.forName("org.hsqldb.jdbcDriver");
 			conn = DriverManager.getConnection("jdbc:hsqldb:mem:mymemdb", "sa", ""); // password
 			Statement stmt = conn.createStatement();
-		      
-		      String sql = "CREATE TABLE REGISTRATION " +
-		                   "(id INTEGER not NULL, " +
-		                   " first VARCHAR(255), " + 
-		                   " last VARCHAR(255), " + 
-		                   " age INTEGER, " + 
-		                   " PRIMARY KEY ( id ))"; 
-	
-		      stmt.executeUpdate(sql);
-		      sql = "insert into REGISTRATION values(0,'Karl', 'Nicholas', 55 )"; 
 
-		      stmt.executeUpdate(sql);
-		      conn.close();
+			String sql = "CREATE TABLE REGISTRATION " 
+					+ "(id INTEGER not NULL, " 
+					+ " last VARCHAR(255), "
+					+ " first VARCHAR(255), " 
+					+ " email VARCHAR(255), " 
+					+ " phone VARCHAR(255), " 
+					+ " age INTEGER, "
+					+ " PRIMARY KEY ( id ))";
+
+			stmt.executeUpdate(sql);
+			sql = "insert into REGISTRATION values(0, 'Abensohn', 'Steven', 'sabensoh@ccsf.edu', '239-3747', 55 )";
+			stmt.executeUpdate(sql);
+			sql = "insert into REGISTRATION values(1, 'Boyd', 'Gregory', 'gboyd@ccsf.edu', '239-3139', 55 )";
+			stmt.executeUpdate(sql);
+			sql = "insert into REGISTRATION values(2, 'Brick', 'Aaron', 'abrick@ccsf.edu', '239-3961', 55 )";
+			stmt.executeUpdate(sql);
+			sql = "insert into REGISTRATION values(3, 'Conner', 'Constance', 'cconner@ccsf.edu', '239-3963', 55 )";
+			stmt.executeUpdate(sql);
+			sql = "insert into REGISTRATION values(4, 'Giambattista', 'Louie', 'lgiambat@ccsf.edu', '239-3845', 55 )";
+			stmt.executeUpdate(sql);
+			sql = "insert into REGISTRATION values(5, 'Harden', 'David', 'dharden@ccsf.edu', '-none', 55 )";
+			stmt.executeUpdate(sql);
+			sql = "insert into REGISTRATION values(6, 'Hunter', 'Cherron', 'chunter@ccsf.edu', '239-3823', 55 )";
+			stmt.executeUpdate(sql);
+			sql = "insert into REGISTRATION values(7, 'Ibrahim', 'Hanan', 'hibrahim@ccsf.edu', '', 55 )";
+			stmt.executeUpdate(sql);
+			sql = "insert into REGISTRATION values(8, 'Luttrell', 'Maximilian', 'mluttrell@ccsf.edu', '', 55 )";
+			stmt.executeUpdate(sql);
+			sql = "insert into REGISTRATION values(9, 'Masters', 'Jessica', 'jlmasters@ccsf.edu', '', 55 )";
+			stmt.executeUpdate(sql);
+			conn.close();
 			System.out.println("connected!! created!! inserted!!! closed!!!");
 		} catch (ClassNotFoundException | SQLException e) {
 			// TODO Auto-generated catch block
