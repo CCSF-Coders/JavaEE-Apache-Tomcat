@@ -1,6 +1,8 @@
 # Java-EE-Struts2
 Simple exploratory project using basic Java EE technologies and Apache Struts2
 
+The code from each week is saved as a "release" in this repository. Each release runs on it's own, but if you want to step through the weeks yourself as shown below, then download each release and run it under Apache Tomcat.
+
 ### Week1 - Installing Apache Tomcat
 We downloaded and installed [Apache Tomcat](https://tomcat.apache.org). A couple of notes and issues.
   
